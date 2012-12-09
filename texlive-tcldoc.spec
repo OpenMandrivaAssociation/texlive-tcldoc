@@ -66,3 +66,16 @@ parallels the ltxdoc class.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.40-2
++ Revision: 756515
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.40-1
++ Revision: 719659
+- texlive-tcldoc
+- texlive-tcldoc
+- texlive-tcldoc
+
