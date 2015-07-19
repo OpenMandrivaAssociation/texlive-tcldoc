@@ -6,7 +6,7 @@
 # catalog-version 2.40
 Name:		texlive-tcldoc
 Version:	2.40
-Release:	9
+Release:	10
 Summary:	Doc/docstrip for tcl
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tclldoc
