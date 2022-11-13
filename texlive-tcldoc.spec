@@ -1,19 +1,13 @@
-# revision 22018
-# category Package
-# catalog-ctan /macros/latex/contrib/tclldoc
-# catalog-date 2007-02-28 00:02:05 +0100
-# catalog-license lppl
-# catalog-version 2.40
 Name:		texlive-tcldoc
-Version:	2.40
-Release:	11
+Version:	22018
+Release:	1
 Summary:	Doc/docstrip for tcl
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tclldoc
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tcldoc.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tcldoc.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tcldoc.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tcldoc.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tcldoc.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tcldoc.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ the doc package is for LaTeX, whereas the tclldoc class more
 parallels the ltxdoc class.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -59,23 +53,11 @@ parallels the ltxdoc class.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.40-2
-+ Revision: 756515
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.40-1
-+ Revision: 719659
-- texlive-tcldoc
-- texlive-tcldoc
-- texlive-tcldoc
-
