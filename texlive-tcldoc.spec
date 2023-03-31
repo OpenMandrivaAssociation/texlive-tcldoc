@@ -1,6 +1,6 @@
 Name:		texlive-tcldoc
 Version:	22018
-Release:	1
+Release:	2
 Summary:	Doc/docstrip for tcl
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tclldoc
